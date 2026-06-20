@@ -81,7 +81,7 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 > Each phase = one or more weekends. **Definition of shipped = deployed and reachable at the domain.**
 > Tackle top-to-bottom; never start a phase before the previous one is live.
 
-### Phase 0 — Foundations + the router exists (Weekend 1) → **v0.1**
+### Phase 0 — Foundations + the router exists (Day 1) → **v0.1**
 - [ ] Pick domain, create repo, wire push-to-deploy (Vercel/Netlify)
 - [x] Build the **content data model** v1: career stations + projects + skills, seeded from
       `CLAUDE.md` + `projects.csv`. Persona-agnostic storage with per-persona framing fields.
@@ -89,11 +89,11 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [x] Landing screen: **the 3-persona selector** (the front door) — `PersonaSelector.tsx`
 - [x] Render each persona as a clean, well-typed page (plain styling is fine) —
       `RecruiterView`, `FounderView`, `StalkerView`; URL routing via `?persona=`
-- [ ] **Deploy live.** Done = a stranger can pick a persona and read an adapted story.
+- [x] **Deploy live.** hasrul.buzz is live on Vercel, domain connected, push-to-deploy active.
 
 *Already does the thing no one else does. Ship it even if it's black text on white.*
 
-### Phase 1 — Make the router smart (Weekends 2–3) → **v0.3**
+### Phase 1 — Make the router smart (Day 1–2) → **v0.3**
 - [ ] Recruiter **role-lens sub-selector** (7 roles) → filtered projects + per-role fit summary
 - [ ] Apply the **§E stack-deficit honesty notes** per lens (name gap + transferable bridge)
 - [ ] Founder **boss-mode** view: 3 pure-PE projects (ATM, EV Fleet, Secure Offline IoT Bridge)
@@ -102,14 +102,14 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] **Deep links**: `?persona=…&lens=…` restore exact state (the job-hunt superpower)
 - [ ] Deploy. Done = every persona path is real and individually linkable.
 
-### Phase 2 — Game-feel without a game engine (Weekends 4–5) → **v0.5**
+### Phase 2 — Game-feel without a game engine (Day 2) → **v0.5**
 - [ ] Career-as-journey visual: an animated **timeline/map of stations** (still HTML/CSS/SVG)
 - [ ] Click a station → project cards (persona-filtered)
 - [ ] **Skill-tree / character-sheet** component for the recruiter lens (stats per role)
 - [ ] Retro pixel font, transitions, optional sound → the hajj.buzz *vibe* cheaply
 - [ ] Deploy. Done = it *feels* like a game without being one yet.
 
-### Phase 3 — The pixel walker (Weekends 6–10+) → **v1.0**
+### Phase 3 — The pixel walker (Weekends 2) → **v1.0**
 - [ ] Introduce Phaser: a tile-map "career world," one zone per station
 - [ ] Avatar walks station→station; **NPCs deliver persona-filtered dialogue** (reuse the SAME
       content model — no new content, just a new renderer)
