@@ -79,12 +79,12 @@ Keep the subject line under 72 characters; use the body only when the *why* is n
 - **One decision per file** in `ADR/adr-NNNN.md`; register it in the `ADR.md` index table.
 - **Append-only.** Once an ADR is `Accepted`, never edit its substance — write a *new* ADR that
   supersedes it.
-- **Never reference earlier drafts, "proposed versions", or removed text inside an ADR.** ADRs read as
+- **Never reference earlier drafts, "Draft versions", or removed text inside an ADR.** ADRs read as
   final. **Git is the history** — use it to see prior versions, not prose like "an earlier draft said…".
 - **Prior art is expected**, especially for design/architecture ADRs: cite real references, each with a
   short "what we borrow / how our case differs" note, and an explicit "what we did *not* borrow." The
   goal is to show research, not invention from thin air.
-- Status vocabulary: `Proposed` · `Accepted` (date-stamped) · `Superseded`.
+- Status vocabulary: `Draft` · `Accepted` (date-stamped) · `Superseded`.
 
 ## Honesty rules (inherited from the profile's CLAUDE.md — apply to all site copy)
 

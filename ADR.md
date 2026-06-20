@@ -37,6 +37,7 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0001](ADR/adr-0001.md) | Site type — a persona-routing, content-first / game-optional personal site | Accepted | 2026-06-20 |
 | [ADR-0002](ADR/adr-0002.md) | Frontend stack — Vite + React + TypeScript (SPA-first, SSG-later) | Accepted | 2026-06-20 |
 | [ADR-0003](ADR/adr-0003.md) | Content data model — persona-agnostic storage, tag-filtered + framing-centralised at render | Accepted | 2026-06-20 |
+| [ADR-0004](ADR/adr-0004.md) | Career visualisation — how to render the stations as a map/journey in Phase 2 | Proposed | — |
 
 ---
 
