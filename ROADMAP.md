@@ -94,12 +94,16 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 *Already does the thing no one else does. Ship it even if it's black text on white.*
 
 ### Phase 1 — Make the router smart (Day 1–2) → **v0.3**
-- [ ] Recruiter **role-lens sub-selector** (7 roles) → filtered projects + per-role fit summary
-- [ ] Apply the **§E stack-deficit honesty notes** per lens (name gap + transferable bridge)
-- [ ] Founder **boss-mode** view: 3 pure-PE projects (ATM, EV Fleet, Secure Offline IoT Bridge)
-      + the role-cycling arc
-- [ ] Stalker view: hobbies, games, Instagram, Warnet origin, Korea blogger award
-- [ ] **Deep links**: `?persona=…&lens=…` restore exact state (the job-hunt superpower)
+- [x] Recruiter **role-lens sub-selector** (7 roles) → filtered projects + per-role fit summary
+      (`src/content/lenses.ts`, `LensSelector.tsx`, lens-aware `RecruiterView.tsx`)
+- [x] Apply the **§E stack-deficit honesty notes** per lens (name gap + transferable bridge) —
+      one `bridge` field per lens, rendered as a distinct "Honest gap & bridge" block
+- [x] Founder **boss-mode** view: 3 pure-PE projects (ATM, EV Fleet, Secure Offline IoT Bridge)
+      + the role-cycling arc (built in Phase 0; complete)
+- [x] Stalker view: Warnet origin + Korea blogger award + physics-team + hardware tinkerer
+      (hobbies / games / Instagram pending Hasrul's input — not invented, per §A)
+- [x] **Deep links**: `?persona=…&lens=…` restore exact state (the job-hunt superpower) —
+      lens persisted in URL, popstate-aware, deep-link lands straight on the filtered view
 - [ ] Deploy. Done = every persona path is real and individually linkable.
 
 ### Phase 2 — Game-feel without a game engine (Day 2) → **v0.5**

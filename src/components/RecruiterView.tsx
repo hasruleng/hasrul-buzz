@@ -1,55 +1,58 @@
 import { stations } from '../content/stations';
 import { projects } from '../content/projects';
+import type { LensDef } from '../content/lenses';
 
-type Props = { onBack: () => void };
+type Props = {
+  lens: LensDef;
+  onChangeLens: () => void;
+  onBack: () => void;
+};
 
-const skills: { category: string; items: string[] }[] = [
-  { category: 'Languages', items: ['C# .NET', 'Python', 'Java', 'SQL', 'C/C++ (embedded)'] },
-  { category: 'Frontend', items: ['React', 'Web API', 'Micro Frontend'] },
-  { category: 'Embedded', items: ['STM32 ST HAL', 'nRF52833 Zephyr RTOS', 'ESP32 ESP-IDF/FreeRTOS', 'I²C', 'MIFARE/RFID'] },
-  { category: 'Cloud / DevOps', items: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Terraform', 'GitLab CI/CD'] },
-  { category: 'Data / IoT', items: ['Kafka', 'Elasticsearch', 'PostgreSQL', 'ETL pipelines', 'CAN-bus telemetry', 'Databricks', 'MLflow'] },
-  { category: 'Methods', items: ['Scrum · SAFe · PMBOK · ITIL v4', 'PMP (active Jan 2028)', 'PSM I (Scrum.org)'] },
-];
+export function RecruiterView({ lens, onChangeLens, onBack }: Props) {
+  const relevantProjects = projects.filter((p) => p.tags.includes(lens.id));
 
-export function RecruiterView({ onBack }: Props) {
   return (
     <div className="view">
       <nav className="view-nav">
-        <button className="back-btn" onClick={onBack}>← Change lens</button>
-        <span className="persona-badge recruiter-badge">Recruiter view</span>
+        <button className="back-btn" onClick={onChangeLens}>← Change lens</button>
+        <button className="back-btn" onClick={onBack}>Change persona</button>
+        <span className="persona-badge recruiter-badge">{lens.label}</span>
       </nav>
 
       <header className="view-header">
         <h1>Hasrul Maruf</h1>
-        <p className="view-subtitle">
-          Senior Software / Fullstack / Product Engineer · 18+ years · Eindhoven, Netherlands
-        </p>
+        <p className="view-subtitle">{lens.headline}</p>
         <p className="view-tagline">
-          EngD (TU/e) · PMP · PSM I · Indonesian, open to relocation globally
+          18+ years · EngD (TU/e) · PMP · PSM I · Eindhoven, NL · open to relocation globally
         </p>
       </header>
 
       <section className="view-section">
-        <h2>Summary</h2>
-        <p>
-          18+ years spanning full-stack development, embedded firmware, software architecture,
-          project and product management, DevSecOps, research, and teaching — across Indonesia,
-          South Korea, and the Netherlands. Currently at Alltrons shipping across 5 simultaneous
-          projects (web, mobile, multi-platform embedded, security R&amp;D). Recently completed an
-          EngD at TU Eindhoven and a 10-month contract at Thermo Fisher Scientific.
-        </p>
-        <p className="hint">
-          Role lens selector coming in Phase 1 — for now, all flagships are listed below.
-          Deep-link: <code>?persona=recruiter&amp;lens=backend</code>
-        </p>
+        <h2>Fit for {lens.label}</h2>
+        <p>{lens.fitSummary}</p>
+        <div className="bridge-note">
+          <span className="bridge-label">Honest gap &amp; bridge</span>
+          <p>{lens.bridge}</p>
+        </div>
       </section>
 
       <section className="view-section">
-        <h2>Flagship projects</h2>
+        <h2>Most relevant skills</h2>
+        <div className="lens-skills">
+          {lens.skills.map((s) => (
+            <span key={s} className="skill-chip">{s}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="view-section">
+        <h2>Projects for this lens</h2>
+        <p className="section-note">
+          {relevantProjects.length} of {projects.length} flagship projects matched to {lens.label}.
+        </p>
         <div className="project-list">
-          {projects.map((p) => (
-            <div key={p.id} className="project-card">
+          {relevantProjects.map((p) => (
+            <div key={p.id} className={`project-card${p.isPurePE ? ' pe-card' : ''}`}>
               <div className="project-name">{p.name}</div>
               <div className="project-period">{p.period}</div>
               <div className="project-one-liner">{p.oneLiner}</div>
@@ -60,7 +63,10 @@ export function RecruiterView({ onBack }: Props) {
       </section>
 
       <section className="view-section">
-        <h2>Career timeline</h2>
+        <h2>Full career timeline</h2>
+        <p className="section-note">
+          The complete arc — the lens above filters the highlights, but the whole career is here.
+        </p>
         <div className="station-list">
           {stations.map((s) => (
             <div key={s.id} className="station">
@@ -74,18 +80,6 @@ export function RecruiterView({ onBack }: Props) {
               <ul className="station-bullets">
                 {s.bullets.map((b, i) => <li key={i}>{b}</li>)}
               </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="view-section">
-        <h2>Skills</h2>
-        <div className="skills-grid">
-          {skills.map((cat) => (
-            <div key={cat.category} className="skill-category">
-              <div className="skill-cat-label">{cat.category}</div>
-              <div className="skill-items">{cat.items.join(' · ')}</div>
             </div>
           ))}
         </div>

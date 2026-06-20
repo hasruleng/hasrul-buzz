@@ -69,14 +69,14 @@ export function StalkerView({ onBack }: Props) {
       </section>
 
       <section className="view-section">
-        <h2>What he\'s about</h2>
+        <h2>What he's about</h2>
         <p>
-          He builds things that work, ships them before they\'re perfect, and learns what\'s
+          He builds things that work, ships them before they're perfect, and learns what's
           wrong from users rather than from speculation. The Warnet taught him that. PLN reinforced
           it at national scale. Alltrons is the current proving ground.
         </p>
         <p>
-          He\'s not chasing the flashiest stack. He\'s chasing the hardest problem available in
+          He's not chasing the flashiest stack. He's chasing the hardest problem available in
           the constraints he has.
         </p>
       </section>

@@ -257,11 +257,89 @@ body {
 
 .view-footer a { color: var(--fg); }
 
+/* ── Lens selector (recruiter sub-selector) ───────────── */
+
+.lens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lens-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.lens-card:hover {
+  border-color: var(--accent-r);
+  box-shadow: 0 2px 10px rgba(26, 78, 140, 0.12);
+}
+
+.lens-label { font-size: 1.05rem; font-weight: 700; }
+.lens-tagline { font-size: 0.86rem; color: var(--muted); font-style: italic; }
+.lens-cta { margin-top: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--accent-r); }
+
+.view-footer code,
+.selector-footer code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: #f0f0ec;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* ── Lens content: bridge note + skill chips ──────────── */
+
+.bridge-note {
+  margin-top: 1rem;
+  border-left: 3px solid var(--accent-r);
+  background: #f4f7fb;
+  padding: 0.85rem 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.bridge-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--accent-r);
+  margin-bottom: 0.35rem;
+}
+
+.bridge-note p { margin-bottom: 0; font-size: 0.9rem; }
+
+.lens-skills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.skill-chip {
+  font-size: 0.82rem;
+  background: #eef0f2;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  color: var(--fg);
+}
+
+/* allow the second nav button to sit before the badge */
+.view-nav .back-btn + .back-btn { margin-left: -0.5rem; }
+
 /* ── Responsive ───────────────────────────────────────── */
 
 @media (max-width: 520px) {
   .selector-header h1 { font-size: 1.8rem; }
   .persona-grid { grid-template-columns: 1fr; }
+  .lens-grid { grid-template-columns: 1fr; }
   .view-header h1 { font-size: 1.6rem; }
   .skill-category { flex-direction: column; gap: 0.2rem; }
+  .view-nav { flex-wrap: wrap; }
 }
