@@ -83,10 +83,12 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 
 ### Phase 0 — Foundations + the router exists (Weekend 1) → **v0.1**
 - [ ] Pick domain, create repo, wire push-to-deploy (Vercel/Netlify)
-- [ ] Build the **content data model** v1: career stations + projects + skills, seeded from
+- [x] Build the **content data model** v1: career stations + projects + skills, seeded from
       `CLAUDE.md` + `projects.csv`. Persona-agnostic storage with per-persona framing fields.
-- [ ] Landing screen: **the 3-persona selector** (the front door)
-- [ ] Render each persona as a clean, well-typed page (plain styling is fine)
+      (`src/content/types.ts`, `stations.ts`, `projects.ts`)
+- [x] Landing screen: **the 3-persona selector** (the front door) — `PersonaSelector.tsx`
+- [x] Render each persona as a clean, well-typed page (plain styling is fine) —
+      `RecruiterView`, `FounderView`, `StalkerView`; URL routing via `?persona=`
 - [ ] **Deploy live.** Done = a stranger can pick a persona and read an adapted story.
 
 *Already does the thing no one else does. Ship it even if it's black text on white.*
