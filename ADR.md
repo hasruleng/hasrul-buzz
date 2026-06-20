@@ -36,15 +36,17 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 |---|---|---|---|
 | [ADR-0001](ADR/adr-0001.md) | Site type — a persona-routing, content-first / game-optional personal site | Accepted | 2026-06-20 |
 | [ADR-0002](ADR/adr-0002.md) | Frontend stack — Vite + React + TypeScript (SPA-first, SSG-later) | Accepted | 2026-06-20 |
+| [ADR-0003](ADR/adr-0003.md) | Content data model — persona-agnostic storage, tag-filtered + framing-centralised at render | Accepted | 2026-06-20 |
 
 ---
 
 ## Open questions / backlog (future ADRs)
 
-These are decisions we know are coming but haven't framed yet:
+These are decisions we know are coming but haven't framed yet. Numbers are assigned when an ADR is
+*written* (chronological IDs, not a queue), so these are listed without numbers:
 
-- **ADR-0003 (likely)** — Game engine for the Phase-3 pixel walker (Phaser 3 vs Kaplay). Deferred to Phase 3.
-- **ADR-0004 (likely)** — Hosting/deploy target (Vercel vs Netlify vs GitHub Pages).
-- **ADR-0005 (likely)** — Domain choice (`hasrul.engineer` vs `hasrul.buzz` vs buy-both-and-redirect).
-- **ADR-0006 (likely)** — Content data model shape (the persona-agnostic career schema).
-- **ADR-0007 (likely)** — Styling approach (plain CSS modules vs Tailwind).
+- **Game engine** for the Phase-3 pixel walker (Phaser 3 vs Kaplay). Deferred to Phase 3.
+- **Hosting/deploy target** — *decided in practice* (Vercel, push-to-deploy, `hasrul.buzz` connected);
+  not yet written up as an ADR.
+- **Domain choice** — *decided in practice* (`hasrul.buzz` live); not yet written up as an ADR.
+- **Styling approach** (plain CSS vs CSS modules vs Tailwind). Currently plain global CSS; no ADR yet.
