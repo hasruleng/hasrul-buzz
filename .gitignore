@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────
+# hasrul-buzz — .gitignore  (Vite + React + TypeScript SPA)
+# ─────────────────────────────────────────────────────────────
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Vite / bundler cache
+.vite/
+*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Test / coverage
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Secrets & private data (back the README's "secrets hygiene" claim) ──
+# Environment files: never commit real secrets. Commit .env.example only.
+.env
+.env.*
+!.env.example
+# Defensive net: no local copy of the private profile should ever be staged.
+# (The real profile lives outside this repo, linked via the HASRUL_PROFILE env var.)
+profile/
+*.private
+*.secret
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
