@@ -48,6 +48,20 @@ If a decision isn't in an ADR yet, it isn't decided. Don't infer it from code or
 - **Stack** ([ADR-0002](ADR/adr-0002.md)): **Vite + React + TypeScript**, SPA-first. **SEO is an
   explicit non-goal** — traffic is direct-link from CV/LinkedIn, not search.
 
+## Commit messages
+
+Always draft commit messages using the [Conventional Commits](https://www.conventionalcommits.org/) standard:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+```
+
+Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `build`.
+Use a scope when the change is clearly bounded to one area (e.g. `feat(persona-router): ...`).
+Keep the subject line under 72 characters; use the body only when the *why* is non-obvious.
+
 ## Working rules
 
 - **Ship fast; every weekend ends with a live deploy.** Ugly-but-live beats pretty-but-local. Never
