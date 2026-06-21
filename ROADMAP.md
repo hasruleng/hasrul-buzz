@@ -131,10 +131,12 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] Deploy. Done = both modes share one identity and it *feels* like a game without being one yet.
 
 ### Phase 3 — The pixel walker with challenges (Weekends 2) → **v1.0**
-- [ ] **Decide the challenge mechanic in an ADR first** (owed per [ADR-0005](ADR/adr-0005.md)):
-      what the challenges *are* and how they make a persona *discover* role-relevant facts about Hasrul
-      (not generic trivia). Challenge content sourced from `%HASRUL_PROFILE%`, bound by §A/§E.
-- [ ] Introduce Phaser: a tile-map "career world," one zone per station
+- [ ] **Decide the challenge mechanic in an ADR first** (owed per [ADR-0005](ADR/adr-0005.md)) —
+      drafted in [ADR-0007](ADR/adr-0007.md) (per-station persona-framed *evidence checks*:
+      predict-then-reveal, reuse the content model, skippable, §A/§E-bound). Accept it before any code.
+- [ ] **Decide the game engine in an ADR** (still open — Phaser vs Kaplay vs a DOM/React tile renderer;
+      ADR-0007 notes the loop is light, so judge against a modest runtime need)
+- [ ] Introduce the chosen engine: a tile-map "career world," one zone per station
 - [ ] Avatar walks station→station; **NPCs deliver persona-filtered dialogue** (reuse the SAME
       content model — no new content, just a new renderer)
 - [ ] **Challenge-to-advance**: complete a station's challenge to unlock the next — the mechanic that

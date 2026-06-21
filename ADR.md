@@ -40,6 +40,7 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0004](ADR/adr-0004.md) | Career visualisation — readable-site layout (vertical timeline; skill-tree deferred) | Accepted | 2026-06-20 |
 | [ADR-0005](ADR/adr-0005.md) | Differentiation thesis — persona-routing *and* gamified discovery, both serving persona-specific discovery | Accepted | 2026-06-20 |
 | [ADR-0006](ADR/adr-0006.md) | Entry flow — a narrative persona-selection front door, branching to read-or-play | Accepted | 2026-06-21 |
+| [ADR-0007](ADR/adr-0007.md) | Challenge mechanic — per-station evidence checks (persona performs its own evaluation) | Accepted | 2026-06-21 |
 
 ---
 
