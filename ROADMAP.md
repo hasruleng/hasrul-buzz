@@ -145,11 +145,11 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] **Per-persona traversal ADR** — **[ADR-0009](ADR/adr-0009.md) (Draft)**: how founder & casual
       personas walk the hub (chronological vs panoramic "highest mountain" vs the role-building cut).
       Resolve before building the founder/casual worlds (not needed to start the recruiter hub).
-- [ ] **Decide the game engine in an ADR** (still open — Phaser vs Kaplay vs a DOM/React tile renderer).
-      [ADR-0008](ADR/adr-0008.md) sets the runtime bar: walkable avatar + enterable buildings + NPC
-      dialogue + exhibit view (image+caption) + challenge overlay + teleport — all modest/non-physics.
-- [ ] Introduce the chosen engine: the hub world, one **building per role lens**; inside, the stations
-      tagged for that role (reuse the content model — no new facts, a new spatial arrangement).
+- [x] **Game runtime ADR** — **[ADR-0012](ADR/adr-0012.md) accepted**: **no game engine** — render the
+      world in DOM/React/SVG. Stays in the [ADR-0002](ADR/adr-0002.md) stack, keeps text real/accessible,
+      reuses the [ADR-0011](ADR/adr-0011.md) map; hand-roll simple non-physics movement.
+- [ ] Build the world in **DOM/React/SVG** (no engine): the hub, one **building per role lens**; inside,
+      the stations tagged for that role (reuse the content model — no new facts, a new spatial arrangement).
 - [ ] Avatar walks the hub; **NPCs deliver persona-filtered dialogue**; portfolio **screenshots** shown
       as exhibits (a new *asset* dimension on the content model — real artifacts only, §A).
 - [ ] **Challenge-to-advance**: the gatekeeper poses the [ADR-0007](ADR/adr-0007.md) check at a

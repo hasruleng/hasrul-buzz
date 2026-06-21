@@ -45,6 +45,7 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0009](ADR/adr-0009.md) | Per-persona world traversal — how founder & casual personas experience the hub | Draft | — |
 | [ADR-0010](ADR/adr-0010.md) | In-game journey metrics — one discovery number at the finale + an ambient pace gag | Accepted | 2026-06-21 |
 | [ADR-0011](ADR/adr-0011.md) | Shared visual identity — a cartographic "map of Hasrul's world" | Accepted | 2026-06-21 |
+| [ADR-0012](ADR/adr-0012.md) | Game runtime — render the Phase-3 world in DOM/React/SVG (no game engine) | Accepted | 2026-06-21 |
 
 ---
 
@@ -53,7 +54,8 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 These are decisions we know are coming but haven't framed yet. Numbers are assigned when an ADR is
 *written* (chronological IDs, not a queue), so these are listed without numbers:
 
-- **Game engine** for the Phase-3 pixel walker (Phaser 3 vs Kaplay). Deferred to Phase 3.
+- ~~**Game engine** for the Phase-3 walker~~ — **decided in [ADR-0012](ADR/adr-0012.md)**: no engine,
+  render in DOM/React/SVG.
 - **Hosting/deploy target** — *decided in practice* (Vercel, push-to-deploy, `hasrul.buzz` connected);
   not yet written up as an ADR.
 - **Domain choice** — *decided in practice* (`hasrul.buzz` live); not yet written up as an ADR.
