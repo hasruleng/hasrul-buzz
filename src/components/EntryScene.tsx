@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Persona } from '../content/types';
+import { HasrulAvatar } from './HasrulAvatar';
 
 /**
  * The bare-root front door (ADR-0006): a narrative, engine-free persona chooser.
@@ -84,6 +85,7 @@ export function EntryScene({ onEnterReadable }: Props) {
           Skip to reading →
         </button>
         <div className="entry-card entry-welcome">
+          <HasrulAvatar size={132} className="entry-avatar" />
           <p className="entry-eyebrow">hasrul.buzz</p>
           <h1 className="entry-title">Well met, adventurer.</h1>
           <p className="entry-greeting">

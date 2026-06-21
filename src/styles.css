@@ -528,6 +528,8 @@ body {
   gap: 1rem;
 }
 
+.entry-avatar { filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12)); margin-bottom: -0.25rem; }
+
 .entry-head {
   text-align: center;
   max-width: 560px;
