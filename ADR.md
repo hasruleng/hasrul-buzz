@@ -39,13 +39,14 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0003](ADR/adr-0003.md) | Content data model — persona-agnostic storage, tag-filtered + framing-centralised at render | Accepted | 2026-06-20 |
 | [ADR-0004](ADR/adr-0004.md) | Career visualisation — readable-site layout (vertical timeline; skill-tree deferred) | Accepted | 2026-06-20 |
 | [ADR-0005](ADR/adr-0005.md) | Differentiation thesis — persona-routing *and* gamified discovery, both serving persona-specific discovery | Accepted | 2026-06-20 |
-| [ADR-0006](ADR/adr-0006.md) | Entry flow — a narrative persona-selection front door, branching to read-or-play | Accepted | 2026-06-21 |
+| [ADR-0006](ADR/adr-0006.md) | Entry flow — a narrative persona-selection front door, branching to read-or-play | Superseded (by [13](ADR/adr-0013.md)) | 2026-06-21 |
 | [ADR-0007](ADR/adr-0007.md) | Challenge mechanic — per-station evidence checks (persona performs its own evaluation) | Accepted | 2026-06-21 |
 | [ADR-0008](ADR/adr-0008.md) | Game scene flow — persona-routed hub of role "buildings," defeatable gatekeeper, magic door | Accepted | 2026-06-21 |
 | [ADR-0009](ADR/adr-0009.md) | Per-persona world traversal — how founder & casual personas experience the hub | Draft | — |
 | [ADR-0010](ADR/adr-0010.md) | In-game journey metrics — one discovery number at the finale + an ambient pace gag | Accepted | 2026-06-21 |
 | [ADR-0011](ADR/adr-0011.md) | Shared visual identity — a cartographic "map of Hasrul's world" | Accepted | 2026-06-21 |
 | [ADR-0012](ADR/adr-0012.md) | Game runtime — render the Phase-3 world in DOM/React/SVG (no game engine) | Accepted | 2026-06-21 |
+| [ADR-0013](ADR/adr-0013.md) | Entry flow revisited — the game world is the default landing; readable site is the escape | Accepted | 2026-06-21 |
 
 ---
 

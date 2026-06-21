@@ -114,12 +114,11 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] Deploy. Done = every persona path is real and individually linkable.
 
 ### Phase 2 — Shared visual identity + game-feel without a game engine (Day 2) → **v0.5**
-- [ ] **Build the narrative entry scene** — the bare-root front door per [ADR-0006](ADR/adr-0006.md):
-      Hasrul greets the "adventurer" → self-select role (recruiter/founder/casual) → branch to
-      **read** (canonical) or **play** (avatar picked here). Engine-free (HTML/CSS/React, no Phaser).
-      **Hard requirements**: deep links (`?persona=…`) bypass the scene; skip-to-text is ≤1 click.
-      This is the **first deliverable of the shared-identity job** — the most-seen surface both modes
-      share, so the palette/type/motifs below are decided *here first*.
+- [x] ~~Build the narrative entry scene (chooser front door, ADR-0006)~~ — **superseded by
+      [ADR-0013](ADR/adr-0013.md)**: the **game world is now the default landing**; persona + avatar are
+      chosen in-world; the readable site is the always-present escape. **Hard guarantees kept**: deep
+      links (`?persona=…`) bypass straight to text; skip-to-text is ≤1 action from frame one. *(Routing
+      flip + in-world entry: implementation pending.)*
 - [x] **Establish the shared visual identity** — **decided in [ADR-0011](ADR/adr-0011.md)**: a
       cartographic *"map of Hasrul's world"* (parchment + ink + contour lines, a single terracotta trail
       accent, persona-region colours, old-style serif + monospace). Reskin, **not** a rebuild (content
@@ -148,15 +147,19 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [x] **Game runtime ADR** — **[ADR-0012](ADR/adr-0012.md) accepted**: **no game engine** — render the
       world in DOM/React/SVG. Stays in the [ADR-0002](ADR/adr-0002.md) stack, keeps text real/accessible,
       reuses the [ADR-0011](ADR/adr-0011.md) map; hand-roll simple non-physics movement.
-- [ ] Build the world in **DOM/React/SVG** (no engine): the hub, one **building per role lens**; inside,
-      the stations tagged for that role (reuse the content model — no new facts, a new spatial arrangement).
-- [ ] Avatar walks the hub; **NPCs deliver persona-filtered dialogue**; portfolio **screenshots** shown
-      as exhibits (a new *asset* dimension on the content model — real artifacts only, §A).
+- [x] Build the world in **DOM/React/SVG** (no engine) — *first slice shipped*: the walkable hub, one
+      **building per role lens**, and a content panel inside each (the stations tagged for that role).
+      `GameWorld.tsx` + `game/world.ts`; reuses the content model, +3.6 KB JS (no engine — ADR-0012).
+- [ ] Avatar walks the hub *(walking + click-to-enter ✓)*; still owed: **NPCs deliver persona-filtered
+      dialogue** and portfolio **screenshots** as exhibits (a new *asset* dimension on the content model —
+      real artifacts only, §A).
 - [ ] **Challenge-to-advance**: the gatekeeper poses the [ADR-0007](ADR/adr-0007.md) check at a
       role-world's exit — commit → reveal → **pass regardless** (never a wall); the second differentiator
-      ([ADR-0005](ADR/adr-0005.md)).
-- [ ] **Magic door / "skip to text"** surfaced on entry to every world — jumps straight to "professional
-      Hasrul" (canonical readable facts); the game is always skippable.
+      ([ADR-0005](ADR/adr-0005.md)). *(Next slice.)*
+- [ ] **Finale scene ⑤** + journey summary ([ADR-0010](ADR/adr-0010.md)); founder/casual world framing
+      ([ADR-0009](ADR/adr-0009.md)). *(Pending.)*
+- [x] **Magic door / "skip to text"** surfaced on entry to every world — jumps straight to "professional
+      Hasrul" (canonical readable facts); the game is always skippable. *(Present in the hub slice.)*
 - [ ] Quest-giver + gatekeeper character art (flat-SVG, like `HasrulAvatar.tsx`).
 - [ ] **Journey metrics** ([ADR-0010](ADR/adr-0010.md)): a small client-side tracker; **show one**
       persona-framed discovery number on the finale summary card (never a live counter — completionism
