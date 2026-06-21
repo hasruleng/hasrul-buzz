@@ -120,14 +120,19 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
       **Hard requirements**: deep links (`?persona=…`) bypass the scene; skip-to-text is ≤1 click.
       This is the **first deliverable of the shared-identity job** — the most-seen surface both modes
       share, so the palette/type/motifs below are decided *here first*.
-- [ ] **Establish the shared visual identity** (palette + typography + motifs) that both the readable
-      site and the future game will use — per [ADR-0005](ADR/adr-0005.md). Light reskin of the existing
-      site to match; **not** a structural rebuild (content model + router from Phases 0–1 stay as-is).
+- [x] **Establish the shared visual identity** — **decided in [ADR-0011](ADR/adr-0011.md)**: a
+      cartographic *"map of Hasrul's world"* (parchment + ink + contour lines, a single terracotta trail
+      accent, persona-region colours, old-style serif + monospace). Reskin, **not** a rebuild (content
+      model + router from Phases 0–1 stay as-is). *Implementation (styles.css reskin) pending.*
+- [ ] **Apply the reskin**: `:root` palette + type tokens in `styles.css`; the [ADR-0004](ADR/adr-0004.md)
+      timeline restyled as a **route with station pins**; flat-SVG motif assets (contour bg, compass,
+      pins, trail). AA contrast on parchment is part of "done".
 - [ ] Career-as-journey visual: an animated **timeline/map of stations** (still HTML/CSS/SVG) —
       layout decided in [ADR-0004](ADR/adr-0004.md) (vertical timeline; skill-tree deferred)
 - [ ] Click a station → project cards (persona-filtered)
 - [ ] **Skill-tree / character-sheet** component for the recruiter lens (stats per role)
-- [ ] Retro pixel font, transitions, optional sound → the hajj.buzz *vibe* cheaply
+- [ ] Transitions + optional sound → the journey *vibe* cheaply (no pixel font — cartographic per
+      [ADR-0011](ADR/adr-0011.md), serif + monospace instead)
 - [ ] Deploy. Done = both modes share one identity and it *feels* like a game without being one yet.
 
 ### Phase 3 — The pixel walker with challenges (Weekends 2) → **v1.0**
