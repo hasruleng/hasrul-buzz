@@ -1,16 +1,21 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --font: 'Georgia', serif;
-  --font-mono: 'Courier New', monospace;
-  --fg: #1a1a1a;
-  --muted: #666;
-  --border: #ddd;
-  --accent-r: #1a4e8c;
-  --accent-f: #7c3e00;
-  --accent-s: #2a6e2a;
-  --bg: #fafaf8;
-  --card-bg: #fff;
+  --font: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Courier New', ui-monospace, monospace;
+
+  /* ── Cartographic identity — "map of Hasrul's world" (ADR-0011) ── */
+  --fg: #2c2418;        /* ink — body text */
+  --muted: #6b5d45;     /* ink soft — captions / metadata */
+  --border: #cdb78d;    /* faded hairline rule */
+  --bg: #f3e7cf;        /* aged-paper base */
+  --card-bg: #faf3e2;   /* raised paper (cards) */
+  --paper-2: #ece0c4;   /* deeper paper tint (chips, inline code) */
+  --trail: #b4532c;     /* the one route/trail accent */
+  --tint-r: #e3edf0;    /* light sea wash */
+  --accent-r: #2f5d6e;  /* sea — recruiter */
+  --accent-f: #9c6b18;  /* ochre — founder */
+  --accent-s: #4f6b34;  /* moss — casual / stalker */
   --max: 760px;
 }
 
@@ -19,7 +24,11 @@ body {
   font-size: 17px;
   line-height: 1.65;
   color: var(--fg);
-  background: var(--bg);
+  background-color: var(--bg);
+  /* faint contour grid — sits well below text, never competes (ADR-0011) */
+  background-image:
+    repeating-linear-gradient(0deg,  transparent 0 38px, rgba(150, 120, 70, 0.045) 38px 39px),
+    repeating-linear-gradient(90deg, transparent 0 38px, rgba(150, 120, 70, 0.045) 38px 39px);
   min-width: 320px;
 }
 
@@ -131,9 +140,9 @@ body {
   letter-spacing: 0.5px;
 }
 
-.recruiter-badge { background: #e8eff8; color: var(--accent-r); }
-.founder-badge   { background: #fdf0e0; color: var(--accent-f); }
-.stalker-badge   { background: #e8f4e8; color: var(--accent-s); }
+.recruiter-badge { background: #e3edf0; color: var(--accent-r); }
+.founder-badge   { background: #f1e6cf; color: var(--accent-f); }
+.stalker-badge   { background: #e7eede; color: var(--accent-s); }
 
 .view-header { margin-bottom: 2.5rem; }
 .view-header h1 { font-size: 2rem; font-weight: 700; }
@@ -160,7 +169,7 @@ body {
 .hint code {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  background: #f0f0ec;
+  background: var(--paper-2);
   padding: 0.1em 0.3em;
   border-radius: 3px;
 }
@@ -281,7 +290,7 @@ body {
 
 .lens-card:hover {
   border-color: var(--accent-r);
-  box-shadow: 0 2px 10px rgba(26, 78, 140, 0.12);
+  box-shadow: 0 2px 10px rgba(47, 93, 110, 0.15);
 }
 
 .lens-label { font-size: 1.05rem; font-weight: 700; }
@@ -292,7 +301,7 @@ body {
 .selector-footer code {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  background: #f0f0ec;
+  background: var(--paper-2);
   padding: 0.1em 0.3em;
   border-radius: 3px;
 }
@@ -302,7 +311,7 @@ body {
 .bridge-note {
   margin-top: 1rem;
   border-left: 3px solid var(--accent-r);
-  background: #f4f7fb;
+  background: var(--tint-r);
   padding: 0.85rem 1rem;
   border-radius: 0 4px 4px 0;
 }
@@ -323,7 +332,7 @@ body {
 
 .skill-chip {
   font-size: 0.82rem;
-  background: #eef0f2;
+  background: var(--paper-2);
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.25rem 0.7rem;
@@ -361,14 +370,15 @@ body {
 
 .timeline { position: relative; margin-top: 0.5rem; }
 
+/* the trail — a dashed terracotta route the stations sit along (ADR-0011) */
 .timeline::before {
   content: '';
   position: absolute;
   left: 6px;
   top: 0.9rem;
   bottom: 0.9rem;
-  width: 2px;
-  background: var(--border);
+  width: 0;
+  border-left: 2px dashed var(--trail);
 }
 
 .tl-node { position: relative; padding-left: 1.75rem; }
@@ -395,12 +405,13 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--bg);
-  border: 2px solid var(--muted);
+  background: var(--card-bg);
+  border: 2px solid var(--trail);
   transition: background 0.12s, border-color 0.12s;
 }
 
-.tl-node.open .tl-dot { background: var(--accent-r); border-color: var(--accent-r); }
+/* an opened station reads as the "you are here" pin */
+.tl-node.open .tl-dot { background: var(--trail); border-color: var(--trail); }
 
 .tl-period { font-weight: 600; font-size: 0.84rem; color: var(--muted); }
 .tl-employer { font-weight: 700; font-size: 0.93rem; }
@@ -432,7 +443,7 @@ body {
   border: 2px solid var(--accent-r);
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
-  background: #f4f7fb;
+  background: var(--tint-r);
 }
 
 .st-class { display: block; font-weight: 700; font-size: 1.05rem; color: var(--accent-r); }
@@ -475,12 +486,12 @@ body {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--muted);
-  background: #eef0f2;
+  background: var(--paper-2);
   border-radius: 999px;
   padding: 0.05rem 0.4rem;
 }
 
-.st-node.open .st-count { color: var(--accent-r); background: #fff; }
+.st-node.open .st-count { color: var(--accent-r); background: var(--card-bg); }
 
 .st-proof {
   margin-top: 0.4rem;
