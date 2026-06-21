@@ -113,12 +113,17 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] Deploy. Done = every persona path is real and individually linkable.
 
 ### Phase 2 — Shared visual identity + game-feel without a game engine (Day 2) → **v0.5**
+- [ ] **Build the narrative entry scene** — the bare-root front door per [ADR-0006](ADR/adr-0006.md):
+      Hasrul greets the "adventurer" → self-select role (recruiter/founder/casual) → branch to
+      **read** (canonical) or **play** (avatar picked here). Engine-free (HTML/CSS/React, no Phaser).
+      **Hard requirements**: deep links (`?persona=…`) bypass the scene; skip-to-text is ≤1 click.
+      This is the **first deliverable of the shared-identity job** — the most-seen surface both modes
+      share, so the palette/type/motifs below are decided *here first*.
 - [ ] **Establish the shared visual identity** (palette + typography + motifs) that both the readable
-      site and the future game will use — the *primary* Phase-2 job, per [ADR-0005](ADR/adr-0005.md).
-      Light reskin of the existing site to match; **not** a structural rebuild (content model + router
-      from Phases 0–1 stay as-is).
+      site and the future game will use — per [ADR-0005](ADR/adr-0005.md). Light reskin of the existing
+      site to match; **not** a structural rebuild (content model + router from Phases 0–1 stay as-is).
 - [ ] Career-as-journey visual: an animated **timeline/map of stations** (still HTML/CSS/SVG) —
-      pick the layout in [ADR-0004](ADR/adr-0004.md) (currently Draft; decide before building)
+      layout decided in [ADR-0004](ADR/adr-0004.md) (vertical timeline; skill-tree deferred)
 - [ ] Click a station → project cards (persona-filtered)
 - [ ] **Skill-tree / character-sheet** component for the recruiter lens (stats per role)
 - [ ] Retro pixel font, transitions, optional sound → the hajj.buzz *vibe* cheaply

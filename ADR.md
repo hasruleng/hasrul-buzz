@@ -7,7 +7,7 @@ short, focused on *why*, never edited once **Accepted** (a later ADR supersedes 
 This repo is intended to be **public on GitHub**. The ADRs are therefore part of the deliverable:
 the site sells *product judgment*, and a visible, honest decision trail is itself evidence of it.
 
-**Status vocabulary**: `Proposed` (open decision, alternatives captured, not chosen yet) ·
+**Status vocabulary**: `Draft` (open decision, alternatives captured, not chosen yet) ·
 `Accepted` (decided; date stamped) · `Superseded` (replaced by a later ADR).
 **Dates** are filled in when an ADR moves to *Accepted*.
 
@@ -39,6 +39,7 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0003](ADR/adr-0003.md) | Content data model — persona-agnostic storage, tag-filtered + framing-centralised at render | Accepted | 2026-06-20 |
 | [ADR-0004](ADR/adr-0004.md) | Career visualisation — readable-site layout (vertical timeline; skill-tree deferred) | Accepted | 2026-06-20 |
 | [ADR-0005](ADR/adr-0005.md) | Differentiation thesis — persona-routing *and* gamified discovery, both serving persona-specific discovery | Accepted | 2026-06-20 |
+| [ADR-0006](ADR/adr-0006.md) | Entry flow — a narrative persona-selection front door, branching to read-or-play | Accepted | 2026-06-21 |
 
 ---
 
