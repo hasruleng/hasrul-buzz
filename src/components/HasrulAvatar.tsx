@@ -1,8 +1,8 @@
 /**
  * Hasrul — the host/NPC who greets the visitor in the entry scene (ADR-0006).
  *
- * Stylised flat-vector character: short dark hair, horizontal chin patch,
- * warm open smile, charcoal polo, subtly pointed ears.
+ * Stylised flat-vector character: a Tintin-style quiff over a high hairline,
+ * horizontal chin patch, warm open smile, charcoal polo, subtly pointed ears.
  * Hand-authored SVG — crisp at any size; re-skin once Phase-2 shared visual
  * identity (ADR-0005) lands. Distinct from the visitor's cosmetic emoji avatar.
  */
@@ -57,12 +57,15 @@ export function HasrulAvatar({ size = 128, className, framed = true }: Props) {
         {/* head */}
         <ellipse cx="100" cy="90" rx="43" ry="51" fill="#e2b88a" />
 
-        {/* hair — full swept top with a side part, covering crown + temples */}
+        {/* hair — Tintin-style: high hairline (big forehead) + upswept front quiff */}
         <path
-          d="M54,94 C49,58 66,34 100,34 C134,34 151,58 146,94 C143,81 138,74 130,70 C123,67 116,65 110,64 C106,63 103,62 100,62 C95,63 90,65 84,68 C76,72 67,79 60,89 C57,90 55,90 54,94 Z"
+          d="M56,90 C52,60 66,39 100,39 C134,39 148,60 144,90 C141,82 137,77 131,74 C123,70 114,58 100,57 C86,58 77,70 69,74 C63,77 59,82 56,90 Z"
           fill="#1c1a19"
         />
-        <path d="M114,45 C96,53 79,61 67,77" stroke="#322c28" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.5" />
+        <path
+          d="M101,56 C104,44 113,36 125,35 C123,40 120,45 116,49 C119,48 121,49 122,52 C118,55 110,57 103,57 C102,57 101,56 101,56 Z"
+          fill="#1c1a19"
+        />
 
         {/* eyebrows */}
         <path d="M73,79 Q82,74 91,78" stroke="#1c1a19" strokeWidth="3.5" fill="none" strokeLinecap="round" />
