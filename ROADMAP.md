@@ -4,8 +4,12 @@
 > adapts to them. The site *is* the Product-Engineer proof: it demonstrates the exact skill
 > being sold — understanding different users and shipping an experience for each.
 
-**North star**: *Product judgment*, not engineering wow. The differentiator is the persona-router
-(no portfolio in the wild does this), not the graphics. Spend effort on the router, not the renderer.
+**North star**: *Product judgment*, not engineering wow. **One goal governs every feature: help each
+persona discover the specific things about Hasrul that matter to their interest/business.** Two
+differentiators serve it (see [ADR-0005](ADR/adr-0005.md)): ① **persona-routing** (decides *what* you
+discover) and ② **gamified discovery** — a skippable game where you complete challenges to advance
+(a more memorable *how*). Spend effort on the router and the challenge mechanic, **not** on
+graphics-wow.
 
 **Cadence**: ship fast, improve every weekend. **Every weekend ends with a live deploy.** Ugly-but-live
 beats pretty-but-local. Continuous improvement over big-bang launch.
@@ -31,14 +35,16 @@ Separate three layers so the skin can change without touching the brain:
 └──────────────────────────────────────────────────────────┘
             │ rendered by ▼
 ┌─ RENDER layer (the "skin") ─────────────────────────────┐
-│  v1: clean typographic web UI.                           │
-│  v2: animated career map / skill-tree.                   │  ← disposable / swappable
-│  v3: pixel-walker game (Phaser).                         │
-└──────────────────────────────────────────────────────────┘
+│  v1: clean typographic web UI.                           │  ← specific skin = swappable
+│  v2: animated career map / skill-tree + shared identity. │     BUT having a game mode is
+│  v3: pixel-walker game w/ challenges (Phaser).           │     strategic, not optional
+└──────────────────────────────────────────────────────────┘     (ADR-0005)
 ```
 
 **Why this matters**: the routing logic is identical whether the skin is a plain page or a tile-map
 game. Build the brain once; reskin forever. Nothing built in Phase 0 gets thrown away in Phase 3.
+Per [ADR-0005](ADR/adr-0005.md): a *specific* skin is disposable, but the **game mode itself is a
+differentiator** — so the readable site and the game share one visual identity and read as one product.
 
 ---
 
@@ -106,20 +112,31 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
       lens persisted in URL, popstate-aware, deep-link lands straight on the filtered view
 - [ ] Deploy. Done = every persona path is real and individually linkable.
 
-### Phase 2 — Game-feel without a game engine (Day 2) → **v0.5**
-- [ ] Career-as-journey visual: an animated **timeline/map of stations** (still HTML/CSS/SVG)
+### Phase 2 — Shared visual identity + game-feel without a game engine (Day 2) → **v0.5**
+- [ ] **Establish the shared visual identity** (palette + typography + motifs) that both the readable
+      site and the future game will use — the *primary* Phase-2 job, per [ADR-0005](ADR/adr-0005.md).
+      Light reskin of the existing site to match; **not** a structural rebuild (content model + router
+      from Phases 0–1 stay as-is).
+- [ ] Career-as-journey visual: an animated **timeline/map of stations** (still HTML/CSS/SVG) —
+      pick the layout in [ADR-0004](ADR/adr-0004.md) (currently Draft; decide before building)
 - [ ] Click a station → project cards (persona-filtered)
 - [ ] **Skill-tree / character-sheet** component for the recruiter lens (stats per role)
 - [ ] Retro pixel font, transitions, optional sound → the hajj.buzz *vibe* cheaply
-- [ ] Deploy. Done = it *feels* like a game without being one yet.
+- [ ] Deploy. Done = both modes share one identity and it *feels* like a game without being one yet.
 
-### Phase 3 — The pixel walker (Weekends 2) → **v1.0**
+### Phase 3 — The pixel walker with challenges (Weekends 2) → **v1.0**
+- [ ] **Decide the challenge mechanic in an ADR first** (owed per [ADR-0005](ADR/adr-0005.md)):
+      what the challenges *are* and how they make a persona *discover* role-relevant facts about Hasrul
+      (not generic trivia). Challenge content sourced from `%HASRUL_PROFILE%`, bound by §A/§E.
 - [ ] Introduce Phaser: a tile-map "career world," one zone per station
 - [ ] Avatar walks station→station; **NPCs deliver persona-filtered dialogue** (reuse the SAME
       content model — no new content, just a new renderer)
-- [ ] **"Skip to text" escape hatch** for hurried recruiters (like hajj.buzz's readable pages)
+- [ ] **Challenge-to-advance**: complete a station's challenge to unlock the next — the mechanic that
+      pushes past hajj.buzz's walk-and-talk and is the second differentiator ([ADR-0005](ADR/adr-0005.md))
+- [ ] **"Skip to text" escape hatch** for hurried recruiters (the game is always skippable; the
+      readable site stays canonical)
 - [ ] Mobile touch controls
-- [ ] Deploy. Done = the hajj.buzz-style walkable experience, persona-aware.
+- [ ] Deploy. Done = persona-aware walkable experience with challenge-gated discovery.
 
 ### Phase 4 — Polish, discoverability, flex (ongoing)
 - [ ] **Analytics**: which persona/lens gets viewed (this is product feedback — very on-brand)

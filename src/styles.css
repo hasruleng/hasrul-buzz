@@ -333,6 +333,170 @@ body {
 /* allow the second nav button to sit before the badge */
 .view-nav .back-btn + .back-btn { margin-left: -0.5rem; }
 
+/* ── A/B toggle (ADR-0004 review) ─────────────────────── */
+
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.view-toggle button {
+  background: var(--card-bg);
+  border: none;
+  padding: 0.4rem 0.95rem;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: background 0.12s, color 0.12s;
+}
+
+.view-toggle button + button { border-left: 1px solid var(--border); }
+.view-toggle button.active { background: var(--accent-r); color: #fff; }
+
+/* ── Option A — vertical timeline ─────────────────────── */
+
+.timeline { position: relative; margin-top: 0.5rem; }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0.9rem;
+  bottom: 0.9rem;
+  width: 2px;
+  background: var(--border);
+}
+
+.tl-node { position: relative; padding-left: 1.75rem; }
+
+.tl-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.6rem 0;
+  font-family: var(--font);
+  color: var(--fg);
+}
+
+.tl-dot {
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--muted);
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.tl-node.open .tl-dot { background: var(--accent-r); border-color: var(--accent-r); }
+
+.tl-period { font-weight: 600; font-size: 0.84rem; color: var(--muted); }
+.tl-employer { font-weight: 700; font-size: 0.93rem; }
+.tl-role { font-style: italic; font-size: 0.88rem; color: var(--muted); }
+.tl-toggle { margin-left: auto; font-size: 1.15rem; color: var(--muted); line-height: 1; }
+
+.tl-body { padding: 0 0 0.85rem 0; }
+.tl-summary { font-size: 0.92rem; margin-bottom: 0.5rem; }
+
+.tl-bullets {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* ── Option D — skill tree / character sheet ──────────── */
+
+.skilltree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.st-root {
+  border: 2px solid var(--accent-r);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  background: #f4f7fb;
+}
+
+.st-class { display: block; font-weight: 700; font-size: 1.05rem; color: var(--accent-r); }
+.st-level { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+
+.st-trunk { width: 2px; height: 1.5rem; background: var(--border); }
+
+.st-branches {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 1.1rem 0 0;
+  border-top: 2px solid var(--border);
+  max-width: 100%;
+}
+
+.st-node { display: flex; flex-direction: column; align-items: stretch; }
+
+.st-skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-family: var(--font);
+  background: var(--card-bg);
+  color: var(--fg);
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.st-skill:hover { border-color: var(--accent-r); }
+.st-node.open .st-skill { background: var(--accent-r); color: #fff; border-color: var(--accent-r); }
+
+.st-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: #eef0f2;
+  border-radius: 999px;
+  padding: 0.05rem 0.4rem;
+}
+
+.st-node.open .st-count { color: var(--accent-r); background: #fff; }
+
+.st-proof {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  max-width: 16rem;
+  line-height: 1.4;
+}
+
+.st-hint {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* ── Responsive ───────────────────────────────────────── */
 
 @media (max-width: 520px) {

@@ -23,10 +23,12 @@ export type Station = {
 export type Project = {
   id: string;
   name: string;
+  short: string; // compact label for dense UIs (skill tree, badges)
   employer: string;
   period: string;
   oneLiner: string;
   metric?: string;
+  tech: string[]; // concrete stack, sourced verbatim from projects.csv
   tags: RoleLens[];
   isPurePE?: boolean; // the 3 pure product-engineer projects
 };

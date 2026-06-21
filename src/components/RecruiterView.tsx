@@ -1,6 +1,8 @@
 import { stations } from '../content/stations';
 import { projects } from '../content/projects';
 import type { LensDef } from '../content/lenses';
+import { Timeline } from './Timeline';
+import { SkillTree } from './SkillTree';
 
 type Props = {
   lens: LensDef;
@@ -37,12 +39,13 @@ export function RecruiterView({ lens, onChangeLens, onBack }: Props) {
       </section>
 
       <section className="view-section">
-        <h2>Most relevant skills</h2>
-        <div className="lens-skills">
-          {lens.skills.map((s) => (
-            <span key={s} className="skill-chip">{s}</span>
-          ))}
-        </div>
+        <h2>Skills</h2>
+        <p className="section-note">
+          The concrete tech behind the {lens.label} work — each skill's ×N count and its
+          “proven in” list span Hasrul's whole career (crawled from the full project history).
+          Click a skill to see every project that used it.
+        </p>
+        <SkillTree lens={lens} projects={relevantProjects} />
       </section>
 
       <section className="view-section">
@@ -63,26 +66,12 @@ export function RecruiterView({ lens, onChangeLens, onBack }: Props) {
       </section>
 
       <section className="view-section">
-        <h2>Full career timeline</h2>
+        <h2>Career timeline</h2>
         <p className="section-note">
           The complete arc — the lens above filters the highlights, but the whole career is here.
+          Click a station to expand it.
         </p>
-        <div className="station-list">
-          {stations.map((s) => (
-            <div key={s.id} className="station">
-              <div className="station-meta">
-                <span className="station-period">{s.period}</span>
-                <span className="station-employer">{s.employer}</span>
-                <span className="station-location">{s.location}</span>
-              </div>
-              <div className="station-role">{s.role}</div>
-              <p className="station-summary">{s.summary}</p>
-              <ul className="station-bullets">
-                {s.bullets.map((b, i) => <li key={i}>{b}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <Timeline stations={stations} />
       </section>
 
       <section className="view-section">
