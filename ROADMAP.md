@@ -153,14 +153,20 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] **Magic door / "skip to text"** surfaced on entry to every world — jumps straight to "professional
       Hasrul" (canonical readable facts); the game is always skippable.
 - [ ] Quest-giver + gatekeeper character art (flat-SVG, like `HasrulAvatar.tsx`).
+- [ ] **Journey metrics** ([ADR-0010](ADR/adr-0010.md)): a small client-side tracker; **show one**
+      persona-framed discovery number on the finale summary card (never a live counter — completionism
+      trap), plus an optional ambient runner pace/distance gag. Track many events, show ≤2.
 - [ ] Mobile touch controls.
 - [ ] Deploy. Done = persona-aware walkable hub with challenge-paced (never gated) discovery.
 
 ### Phase 4 — Polish, discoverability, flex (ongoing)
-- [ ] **Analytics**: which persona/lens gets viewed (this is product feedback — very on-brand)
+- [ ] **Analytics**: which persona/lens gets viewed (this is product feedback — very on-brand) — fed by
+      the same [ADR-0010](ADR/adr-0010.md) journey tracker (aggregate + anonymous, no PII; one tracker,
+      two audiences — player summary in Phase 3, Hasrul's analytics here)
 - [ ] ~~SEO content shell~~ — **de-prioritised (non-goal per [ADR-0002](ADR/adr-0002.md))**; traffic
       is direct-link from CV/LinkedIn, not search. Revisit only if that assumption changes.
-- [ ] Achievements / fit-meter gamification; per-persona "contact / hire me" CTA
+- [ ] Achievements / fit-meter gamification; per-persona "contact / hire me" CTA — the fit-meter's
+      visible number is the [ADR-0010](ADR/adr-0010.md) discovery metric
 - [ ] Optional v2 flexes: 3D easter eggs, "chat with my career" LLM (ties to AI capability area)
 
 ---

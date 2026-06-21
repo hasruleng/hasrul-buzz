@@ -43,6 +43,7 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0007](ADR/adr-0007.md) | Challenge mechanic — per-station evidence checks (persona performs its own evaluation) | Accepted | 2026-06-21 |
 | [ADR-0008](ADR/adr-0008.md) | Game scene flow — persona-routed hub of role "buildings," defeatable gatekeeper, magic door | Accepted | 2026-06-21 |
 | [ADR-0009](ADR/adr-0009.md) | Per-persona world traversal — how founder & casual personas experience the hub | Draft | — |
+| [ADR-0010](ADR/adr-0010.md) | In-game journey metrics — one discovery number at the finale + an ambient pace gag | Accepted | 2026-06-21 |
 
 ---
 
