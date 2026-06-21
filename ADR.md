@@ -41,6 +41,8 @@ For the build plan these decisions feed, see [ROADMAP.md](ROADMAP.md).
 | [ADR-0005](ADR/adr-0005.md) | Differentiation thesis — persona-routing *and* gamified discovery, both serving persona-specific discovery | Accepted | 2026-06-20 |
 | [ADR-0006](ADR/adr-0006.md) | Entry flow — a narrative persona-selection front door, branching to read-or-play | Accepted | 2026-06-21 |
 | [ADR-0007](ADR/adr-0007.md) | Challenge mechanic — per-station evidence checks (persona performs its own evaluation) | Accepted | 2026-06-21 |
+| [ADR-0008](ADR/adr-0008.md) | Game scene flow — persona-routed hub of role "buildings," defeatable gatekeeper, magic door | Accepted | 2026-06-21 |
+| [ADR-0009](ADR/adr-0009.md) | Per-persona world traversal — how founder & casual personas experience the hub | Draft | — |
 
 ---
 

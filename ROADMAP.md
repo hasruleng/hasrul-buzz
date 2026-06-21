@@ -131,20 +131,30 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [ ] Deploy. Done = both modes share one identity and it *feels* like a game without being one yet.
 
 ### Phase 3 — The pixel walker with challenges (Weekends 2) → **v1.0**
-- [ ] **Decide the challenge mechanic in an ADR first** (owed per [ADR-0005](ADR/adr-0005.md)) —
-      drafted in [ADR-0007](ADR/adr-0007.md) (per-station persona-framed *evidence checks*:
-      predict-then-reveal, reuse the content model, skippable, §A/§E-bound). Accept it before any code.
-- [ ] **Decide the game engine in an ADR** (still open — Phaser vs Kaplay vs a DOM/React tile renderer;
-      ADR-0007 notes the loop is light, so judge against a modest runtime need)
-- [ ] Introduce the chosen engine: a tile-map "career world," one zone per station
-- [ ] Avatar walks station→station; **NPCs deliver persona-filtered dialogue** (reuse the SAME
-      content model — no new content, just a new renderer)
-- [ ] **Challenge-to-advance**: complete a station's challenge to unlock the next — the mechanic that
-      pushes past hajj.buzz's walk-and-talk and is the second differentiator ([ADR-0005](ADR/adr-0005.md))
-- [ ] **"Skip to text" escape hatch** for hurried recruiters (the game is always skippable; the
-      readable site stays canonical)
-- [ ] Mobile touch controls
-- [ ] Deploy. Done = persona-aware walkable experience with challenge-gated discovery.
+- [x] **Challenge mechanic ADR** (owed per [ADR-0005](ADR/adr-0005.md)) — **[ADR-0007](ADR/adr-0007.md)
+      accepted**: persona-framed *evidence checks* (predict-then-reveal, reveal-and-continue, magic-door
+      shortcut, persona emotions, §A/§E-bound, no hard gate, no trivia).
+- [x] **Game scene-flow ADR** — **[ADR-0008](ADR/adr-0008.md) accepted**: a persona-routed hub of role
+      "buildings," a *defeatable* gatekeeper (theatre, not a wall), and a magic door to the canonical
+      payoff. Scenes ①–② already built (`EntryScene.tsx`); the game proper is ③–⑤.
+- [ ] **Per-persona traversal ADR** — **[ADR-0009](ADR/adr-0009.md) (Draft)**: how founder & casual
+      personas walk the hub (chronological vs panoramic "highest mountain" vs the role-building cut).
+      Resolve before building the founder/casual worlds (not needed to start the recruiter hub).
+- [ ] **Decide the game engine in an ADR** (still open — Phaser vs Kaplay vs a DOM/React tile renderer).
+      [ADR-0008](ADR/adr-0008.md) sets the runtime bar: walkable avatar + enterable buildings + NPC
+      dialogue + exhibit view (image+caption) + challenge overlay + teleport — all modest/non-physics.
+- [ ] Introduce the chosen engine: the hub world, one **building per role lens**; inside, the stations
+      tagged for that role (reuse the content model — no new facts, a new spatial arrangement).
+- [ ] Avatar walks the hub; **NPCs deliver persona-filtered dialogue**; portfolio **screenshots** shown
+      as exhibits (a new *asset* dimension on the content model — real artifacts only, §A).
+- [ ] **Challenge-to-advance**: the gatekeeper poses the [ADR-0007](ADR/adr-0007.md) check at a
+      role-world's exit — commit → reveal → **pass regardless** (never a wall); the second differentiator
+      ([ADR-0005](ADR/adr-0005.md)).
+- [ ] **Magic door / "skip to text"** surfaced on entry to every world — jumps straight to "professional
+      Hasrul" (canonical readable facts); the game is always skippable.
+- [ ] Quest-giver + gatekeeper character art (flat-SVG, like `HasrulAvatar.tsx`).
+- [ ] Mobile touch controls.
+- [ ] Deploy. Done = persona-aware walkable hub with challenge-paced (never gated) discovery.
 
 ### Phase 4 — Polish, discoverability, flex (ongoing)
 - [ ] **Analytics**: which persona/lens gets viewed (this is product feedback — very on-brand)
