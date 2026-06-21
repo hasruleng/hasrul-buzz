@@ -92,7 +92,8 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
 - [x] Build the **content data model** v1: career stations + projects + skills, seeded from
       `CLAUDE.md` + `projects.csv`. Persona-agnostic storage with per-persona framing fields.
       (`src/content/types.ts`, `stations.ts`, `projects.ts`)
-- [x] Landing screen: **the 3-persona selector** (the front door) — `PersonaSelector.tsx`
+- [x] Landing screen: **the 3-persona selector** (the front door) — since
+      [ADR-0006](ADR/adr-0006.md), this is the role step of `EntryScene.tsx`
 - [x] Render each persona as a clean, well-typed page (plain styling is fine) —
       `RecruiterView`, `FounderView`, `StalkerView`; URL routing via `?persona=`
 - [x] **Deploy live.** hasrul.buzz is live on Vercel, domain connected, push-to-deploy active.

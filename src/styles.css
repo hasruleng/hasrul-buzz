@@ -497,6 +497,145 @@ body {
   font-style: italic;
 }
 
+/* ── Entry scene (ADR-0006 narrative front door) ──────── */
+
+.entry-page { position: relative; gap: 1.75rem; }
+
+.entry-skip-corner {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 0.85rem;
+}
+.entry-skip-corner:hover { color: var(--fg); text-decoration: underline; }
+
+.entry-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.entry-head {
+  text-align: center;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.entry-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.entry-title { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; }
+.entry-greeting { font-size: 1.05rem; line-height: 1.6; color: var(--fg); }
+.entry-sub { color: var(--muted); font-size: 1rem; }
+
+.entry-primary {
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--fg);
+  color: var(--bg);
+  border: 1px solid var(--fg);
+  border-radius: 6px;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  transition: opacity 0.12s;
+}
+.entry-primary:hover { opacity: 0.88; }
+
+.entry-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 0.9rem;
+}
+.entry-back:hover { color: var(--fg); }
+
+/* read-or-play branch */
+
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: var(--max);
+}
+
+.branch-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  font-family: var(--font);
+  color: var(--fg);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+}
+.branch-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+
+/* the canonical path reads as primary */
+.branch-read { border: 2px solid var(--fg); }
+.branch-play:hover { border-color: var(--accent-f); }
+
+.branch-emoji { font-size: 2.4rem; line-height: 1; }
+.branch-label { font-size: 1.15rem; font-weight: 700; }
+.branch-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+.branch-cta { margin-top: 0.4rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; }
+
+/* avatar picker (cosmetic only) */
+
+.avatar-preview {
+  font-size: 4.5rem;
+  line-height: 1;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-pickers { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.avatar-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+
+.avatar-figure, .avatar-tone {
+  font-size: 1.6rem;
+  line-height: 1;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+  cursor: pointer;
+  transition: border-color 0.12s, box-shadow 0.12s, transform 0.1s;
+}
+.avatar-tone { font-size: 1.4rem; }
+.avatar-figure:hover, .avatar-tone:hover { transform: translateY(-1px); border-color: var(--muted); }
+.avatar-figure.active, .avatar-tone.active { border-color: var(--fg); box-shadow: 0 0 0 2px var(--fg); }
+
 /* ── Responsive ───────────────────────────────────────── */
 
 @media (max-width: 520px) {
@@ -506,4 +645,7 @@ body {
   .view-header h1 { font-size: 1.6rem; }
   .skill-category { flex-direction: column; gap: 0.2rem; }
   .view-nav { flex-wrap: wrap; }
+  .entry-title { font-size: 1.65rem; }
+  .entry-card { padding: 2rem 1.25rem; }
+  .branch-grid { grid-template-columns: 1fr; }
 }

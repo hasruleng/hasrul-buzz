@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { Persona, RoleLens } from './content/types';
 import { getLens } from './content/lenses';
-import { PersonaSelector } from './components/PersonaSelector';
+import { EntryScene } from './components/EntryScene';
 import { LensSelector } from './components/LensSelector';
 import { RecruiterView } from './components/RecruiterView';
 import { FounderView } from './components/FounderView';
@@ -43,7 +43,8 @@ export default function App() {
   const { persona, lens } = route;
 
   if (!persona) {
-    return <PersonaSelector onSelect={(p) => navigate({ persona: p, lens: null })} />;
+    // Bare-root front door (ADR-0006). Deep links carry a persona and skip this entirely.
+    return <EntryScene onEnterReadable={(p) => navigate({ persona: p, lens: null })} />;
   }
 
   if (persona === 'recruiter') {
