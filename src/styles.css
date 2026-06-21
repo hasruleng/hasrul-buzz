@@ -370,15 +370,22 @@ body {
 
 .timeline { position: relative; margin-top: 0.5rem; }
 
-/* the trail — a dashed terracotta route the stations sit along (ADR-0011) */
+/* the trail — a dashed terracotta route the stations sit along (ADR-0011);
+   the dashes slowly flow downward, like a route being traced on a map */
 .timeline::before {
   content: '';
   position: absolute;
   left: 6px;
   top: 0.9rem;
   bottom: 0.9rem;
-  width: 0;
-  border-left: 2px dashed var(--trail);
+  width: 2px;
+  background-image: repeating-linear-gradient(to bottom, var(--trail) 0 6px, transparent 6px 12px);
+  background-size: 2px 12px;
+  animation: trail-flow 1.4s linear infinite;
+}
+
+@keyframes trail-flow {
+  to { background-position: 0 12px; }
 }
 
 .tl-node { position: relative; padding-left: 1.75rem; }
@@ -410,8 +417,17 @@ body {
   transition: background 0.12s, border-color 0.12s;
 }
 
-/* an opened station reads as the "you are here" pin */
-.tl-node.open .tl-dot { background: var(--trail); border-color: var(--trail); }
+/* an opened station reads as the "you are here" pin — dropped with a ripple */
+.tl-node.open .tl-dot {
+  background: var(--trail);
+  border-color: var(--trail);
+  animation: pin-pulse 0.55s ease-out;
+}
+
+@keyframes pin-pulse {
+  from { box-shadow: 0 0 0 0 rgba(180, 83, 44, 0.45); }
+  to   { box-shadow: 0 0 0 11px rgba(180, 83, 44, 0); }
+}
 
 .tl-period { font-weight: 600; font-size: 0.84rem; color: var(--muted); }
 .tl-employer { font-weight: 700; font-size: 0.93rem; }
@@ -537,6 +553,12 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  animation: entry-arrive 0.45s ease-out;
+}
+
+@keyframes entry-arrive {
+  from { opacity: 0; transform: translateY(10px) scale(0.99); }
+  to   { opacity: 1; transform: none; }
 }
 
 .entry-avatar { filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12)); margin-bottom: -0.25rem; }
@@ -661,4 +683,14 @@ body {
   .entry-title { font-size: 1.65rem; }
   .entry-card { padding: 2rem 1.25rem; }
   .branch-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Motion (ADR-0011 light polish) — fully opt-out ───── */
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline::before,
+  .tl-node.open .tl-dot,
+  .entry-card {
+    animation: none;
+  }
 }
