@@ -129,7 +129,8 @@ export const techIndex: Record<string, string[]> = {
     "WWF Forest Foresight"
   ],
   "OpenTelemetry": [
-    "Algorithm Throughput Modeler"
+    "Algorithm Throughput Modeler",
+    "Framework Foundation"
   ],
   "Flamegraph": [
     "Algorithm Throughput Modeler"
