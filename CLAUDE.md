@@ -97,6 +97,27 @@ The site is outward-facing, so the CV-grade rigor applies to every word shown to
   (relocation/work-authorisation specifics, etc.) stays out of all public site copy.
 - **PE framing** keeps both halves: the pure-ownership projects *and* the role-cycling story.
 
+## Updating the SkillTree (career-wide tech index)
+
+The SkillTree reads from `src/content/techIndex.generated.ts`, which is generated from the private
+`projects.csv`. The file **is committed** (Vercel has no access to the private profile store).
+
+Whenever `projects.csv` changes, run:
+
+```bash
+npm run build:projects
+```
+
+Then commit and push the regenerated file:
+
+```bash
+git add src/content/techIndex.generated.ts
+git commit -m "chore(skills): regenerate techIndex from projects.csv"
+git push
+```
+
+Vercel picks up the push and the live site updates automatically.
+
 ## Doc maintenance
 
 When a decision changes, update [ADR.md](ADR.md), the relevant `ADR/` file, and any contradicting line

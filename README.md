@@ -76,6 +76,16 @@ Content  →  Routing  →  Render
 The Phase-3 game will mount as a [Phaser](https://phaser.io) canvas inside a React route — an addition,
 not a rewrite.
 
+The SkillTree's career-wide tech counts are generated from the private `projects.csv` (never committed).
+After updating the CSV, regenerate and commit:
+
+```bash
+npm run build:projects
+git add src/content/techIndex.generated.ts
+git commit -m "chore(skills): regenerate techIndex from projects.csv"
+git push
+```
+
 ## Privacy & secrets hygiene (by design)
 
 This repo is public, so it carries **only** what's meant to be public. The underlying personal data —

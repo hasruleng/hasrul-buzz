@@ -41,6 +41,9 @@ profile/
 *.private
 *.secret
 
+# Local helper scripts (diagnostic only, not part of the build)
+scripts/count-skills.mjs
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
