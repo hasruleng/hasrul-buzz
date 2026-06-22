@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { Persona, RoleLens } from './content/types';
 import { getLens } from './content/lenses';
-import { EntryScene } from './components/EntryScene';
+import { GameWorld } from './components/GameWorld';
 import { LensSelector } from './components/LensSelector';
 import { RecruiterView } from './components/RecruiterView';
 import { FounderView } from './components/FounderView';
@@ -43,8 +43,9 @@ export default function App() {
   const { persona, lens } = route;
 
   if (!persona) {
-    // Bare-root front door (ADR-0006). Deep links carry a persona and skip this entirely.
-    return <EntryScene onEnterReadable={(p) => navigate({ persona: p, lens: null })} />;
+    // Bare-root default landing is the game world (ADR-0013, supersedes ADR-0006).
+    // Deep links carry a persona and bypass the game entirely to the readable view.
+    return <GameWorld onRead={(p) => navigate({ persona: p, lens: null })} />;
   }
 
   if (persona === 'recruiter') {
