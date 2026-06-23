@@ -1061,6 +1061,17 @@ body {
 }
 .go-option-btn:hover { border-color: var(--trail); }
 .go-enter { margin-top: 0.4rem; width: 100%; }
+.go-door {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.go-door:hover { color: var(--trail); }
 
 @media (max-width: 520px) {
   .go-quest-grid { grid-template-columns: 1fr; }

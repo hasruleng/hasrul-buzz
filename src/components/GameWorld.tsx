@@ -135,8 +135,9 @@ export function GameWorld({ onRead }: Props) {
           <span className="game-persona">
             {persona ? `Quest · ${PERSONA_LABEL[persona]}` : 'Choose your quest'}
           </span>
-          <button className="game-door" onClick={() => onRead(persona ?? 'founder')}>
-            📖 Read the site
+          <button className="game-door" onClick={() => onRead(persona ?? 'founder')}
+            title="This magic door will bring you out of this fun game, directly to your final destination">
+            📖 Read
           </button>
         </div>
       )}
@@ -292,6 +293,10 @@ export function GameWorld({ onRead }: Props) {
               <button className="entry-primary go-enter" onClick={() => setPhase('playing')}>
                 Enter the world →
               </button>
+              <button className="go-door" onClick={() => onRead(persona ?? 'founder')}
+                title="This magic door will bring you out of this fun game, directly to your final destination">
+                🚪 Go to normal site
+              </button>
             </div>
           )}
 
@@ -330,8 +335,9 @@ export function GameWorld({ onRead }: Props) {
             </ul>
 
             <div className="gp-foot">
-              <button className="entry-primary" onClick={() => onRead(persona ?? 'founder')}>
-                🚪 Take the magic door to the readable site →
+              <button className="entry-primary" onClick={() => onRead(persona ?? 'founder')}
+                title="This magic door will bring you out of this fun game, directly to your final destination">
+                🚪 Go to normal site
               </button>
               <button className="entry-back" onClick={() => setOpen(null)}>← Back to the map</button>
             </div>
