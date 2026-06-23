@@ -53,7 +53,7 @@ differentiator** — so the readable site and the game share one visual identity
 | Persona | What they want | What the site shows | Mechanic |
 |---|---|---|---|
 | 🎯 **Recruiter** | "Is he fit for *this* role?" | Pick a **role lens** → filtered projects + skills + a fit summary + honest stack-bridge notes | Role selector → re-themed journey + fit meter |
-| 🚀 **Founder / Owner** | End-to-end ownership, beyond any JD | **Boss mode**: the 3 pure-PE projects + the 13-yr role-cycling arc, no filter | Single big story, "every hat" view |
+| 🚀 **Founder / Owner** | End-to-end ownership, beyond any JD | **Boss mode**: The 4 pure-PE projects + the 13-yr role-cycling arc, no filter | Single big story, "every hat" view |
 | 🕵️ **Stalker** | The human | Hobbies, games played, Instagram, the Warnet origin, Korea blogger-award easter eggs | Bonus / easter-egg zone |
 
 **Recruiter role lenses** (from CLAUDE.md): Backend · Embedded/IoT · Full-stack · QA/Test ·
@@ -105,7 +105,7 @@ Keep v1 framework-light. Resist the urge to add the game engine, 3D, or a CMS ea
       (`src/content/lenses.ts`, `LensSelector.tsx`, lens-aware `RecruiterView.tsx`)
 - [x] Apply the **§E stack-deficit honesty notes** per lens (name gap + transferable bridge) —
       one `bridge` field per lens, rendered as a distinct "Honest gap & bridge" block
-- [x] Founder **boss-mode** view: 3 pure-PE projects (ATM, EV Fleet, Secure Offline IoT Bridge)
+- [x] Founder **boss-mode** view: 4 pure-PE projects (ATM, EV Fleet, Secure Offline IoT Bridge)
       + the role-cycling arc (built in Phase 0; complete)
 - [x] Stalker view: Warnet origin + Korea blogger award + physics-team + hardware tinkerer
       (hobbies / games / Instagram pending Hasrul's input — not invented, per §A)

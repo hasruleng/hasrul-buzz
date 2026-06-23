@@ -45,7 +45,7 @@ export function FounderView({ onBack }: Props) {
       </header>
 
       <section className="view-section">
-        <h2>The 3 pure-PE projects</h2>
+        <h2>The 4 pure-PE projects</h2>
         <p className="section-note">
           One engineer, end-to-end ownership of the full problem space.
         </p>
@@ -85,7 +85,7 @@ export function FounderView({ onBack }: Props) {
       <section className="view-section">
         <h2>Why the two halves reinforce each other</h2>
         <p>
-          The 3 pure-PE projects prove he can own everything end-to-end. The 13+ years of
+          The 4 pure-PE projects prove he can own everything end-to-end. The 13+ years of
           role-cycling prove he can be <em>whatever role the project needs at any moment</em>.
           The cycling is what makes the solo ownership credible — you can only be every role
           at once if you've already been all of them separately.

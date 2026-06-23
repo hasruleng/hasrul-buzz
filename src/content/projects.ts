@@ -41,6 +41,19 @@ export const projects: Project[] = [
     isPurePE: true,
   },
   {
+    id: 'hasrul-buzz',
+    name: 'hasrul.buzz — Gamified Personal Site with Persona Routing',
+    short: 'hasrul.buzz',
+    employer: 'Personal',
+    period: 'Jun 2026 - present',
+    oneLiner:
+      'Demonstrates product judgment through a persona-routed site where the game (not reading) is the default landing — enabling recruiters, founders, and casual visitors to self-select their journey. One content model, three render skins; 3-layer architecture (Content/Routing/Render) reused across game and readable site.',
+    metric: 'Persona-driven game-first landing with adaptive content, mobile touch controls (D-pad), onboarding flow (scenes ①–②), cartographic design language',
+    tech: ['Vite', 'React', 'TypeScript', 'SVG', 'CSS Grid'],
+    tags: ['product', 'fullstack'],
+    isPurePE: true,
+  },
+  {
     id: 'alphatheta',
     name: 'AlphaTheta (Pioneer DJ) Warranty & Service Support System — Alltrons',
     short: 'AlphaTheta Warranty',

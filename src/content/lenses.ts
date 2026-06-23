@@ -117,11 +117,11 @@ export const lenses: LensDef[] = [
     label: 'Product / Forward-Deployed Engineer',
     tagline: 'One-person owner, AI-augmented',
     headline:
-      'The most experienced one-person owner on the market — 3 pure-PE projects + 13 years of role-cycling, now AI-augmented.',
+      'The most experienced one-person owner on the market — 4 pure-PE projects + 13 years of role-cycling, now AI-augmented.',
     fitSummary:
-      'Three projects owned end-to-end by a single engineer: ATM (Thermo Fisher), the EV Fleet Dashboard, and the Secure Offline IoT Bridge. Behind them, 13+ years cycling through PM / Analyst / Architect / Developer / QE — often holding 2–3 hats at once. Plus daily AI-augmented engineering (Claude, Gemini, Copilot, ChatGPT, Deepseek) and a standalone LLM SQL-agent build.',
+      'Four projects owned end-to-end by a single engineer: ATM (Thermo Fisher), the EV Fleet Dashboard, the Secure Offline IoT Bridge, and hasrul.buzz (this site — a gamified personal brand with persona routing and game-first landing). Behind them, 13+ years cycling through PM / Analyst / Architect / Developer / QE — often holding 2–3 hats at once. Plus daily AI-augmented engineering (Claude, Gemini, Copilot, ChatGPT, Deepseek) and a standalone LLM SQL-agent build.',
     bridge:
-      'FDE / PE roles want someone who shape-shifts per customer and per phase — which is exactly what the role-cycling proves; the 3 pure-PE projects show he can also be every role at once when the project demands it. PM Flip training + PMP + PSM I back the customer / PRD / problem-validation muscle.',
+      'FDE / PE roles want someone who shape-shifts per customer and per phase — which is exactly what the role-cycling proves; the 4 pure-PE projects show he can also be every role at once when the project demands it. PM Flip training + PMP + PSM I back the customer / PRD / problem-validation muscle.',
     skills: [
       'End-to-end ownership', 'AI-augmented engineering (Claude / Gemini / Copilot / ChatGPT / Deepseek)',
       'LLM SQL agent', 'PM Flip / PRD / MVP', 'Cross-stack delivery',
