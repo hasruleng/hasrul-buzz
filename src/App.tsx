@@ -6,6 +6,7 @@ import { LensSelector } from './components/LensSelector';
 import { RecruiterView } from './components/RecruiterView';
 import { FounderView } from './components/FounderView';
 import { StalkerView } from './components/StalkerView';
+import { trackPageview } from './analytics';
 
 type RouteState = { persona: Persona | null; lens: RoleLens | null };
 
@@ -30,14 +31,22 @@ export default function App() {
   const [route, setRoute] = useState<RouteState>(readRoute);
 
   useEffect(() => {
-    const onPop = () => setRoute(readRoute());
+    const onPop = () => {
+      const nextRoute = readRoute();
+      setRoute(nextRoute);
+      trackPageview(window.location.pathname + window.location.search);
+    };
     window.addEventListener('popstate', onPop);
+
+    trackPageview(window.location.pathname + window.location.search);
+
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
   const navigate = useCallback((next: RouteState) => {
     writeRoute(next);
     setRoute(next);
+    trackPageview(window.location.pathname + window.location.search);
   }, []);
 
   const { persona, lens } = route;
