@@ -227,6 +227,10 @@ export function GameWorld({ onRead }: Props) {
               <button className="go-skip" onClick={() => setPhase('quest-select')}>
                 Tap to begin →
               </button>
+              <button className="go-door" onClick={() => onRead('founder')}
+                title="This door exits the game and takes you directly to your final destination">
+                🚪 Read instead
+              </button>
             </div>
           )}
 
@@ -248,6 +252,10 @@ export function GameWorld({ onRead }: Props) {
                   </button>
                 ))}
               </div>
+              <button className="go-door" onClick={() => onRead(persona ?? 'founder')}
+                title="This door exits the game and takes you directly to your final destination">
+                🚪 Read instead
+              </button>
             </div>
           )}
 
