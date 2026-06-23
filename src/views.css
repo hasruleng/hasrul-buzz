@@ -1,0 +1,434 @@
+/* ── Persona selector ─────────────────────────────────── */
+
+.selector-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  gap: 2.5rem;
+}
+
+.selector-header { text-align: center; }
+
+.selector-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.selector-subtitle {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.selector-prompt {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: var(--max);
+}
+
+.persona-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.persona-card:hover {
+  border-color: var(--fg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.persona-label { font-size: 1.15rem; font-weight: 700; }
+.persona-tagline { font-style: italic; color: var(--muted); font-size: 0.92rem; }
+.persona-desc { font-size: 0.9rem; color: var(--fg); line-height: 1.5; }
+.persona-cta { margin-top: 0.75rem; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; }
+
+.selector-footer { text-align: center; color: var(--muted); font-size: 0.85rem; }
+.muted { color: var(--muted); }
+
+/* ── Projects ─────────────────────────────────────────── */
+
+.project-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1rem 1.1rem;
+  background: var(--card-bg);
+}
+
+.pe-card { border-left: 3px solid var(--fg); }
+
+.project-name { font-weight: 700; font-size: 0.97rem; }
+.project-period { font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem; }
+.project-one-liner { margin-top: 0.5rem; font-size: 0.93rem; line-height: 1.55; }
+.project-metric { margin-top: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--muted); font-style: italic; }
+
+/* ── Career stations ──────────────────────────────────── */
+
+.station-list { display: flex; flex-direction: column; gap: 1.75rem; }
+.station { border-left: 2px solid var(--border); padding-left: 1.1rem; }
+
+.station-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.station-period { font-weight: 600; color: var(--fg); }
+.station-employer { font-weight: 600; }
+.station-role { font-style: italic; margin-bottom: 0.4rem; }
+.station-summary { font-size: 0.93rem; margin-bottom: 0.5rem; }
+
+.station-bullets {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* ── Skills ───────────────────────────────────────────── */
+
+.skills-grid { display: flex; flex-direction: column; gap: 0.6rem; }
+.skill-category { display: flex; gap: 0.75rem; font-size: 0.9rem; flex-wrap: wrap; }
+.skill-cat-label { font-weight: 700; min-width: 110px; }
+.skill-items { color: var(--muted); }
+
+/* ── Founder arc ──────────────────────────────────────── */
+
+.arc-list { display: flex; flex-direction: column; gap: 1.25rem; }
+.arc-item { border-left: 2px solid var(--border); padding-left: 1rem; }
+
+.arc-header { display: flex; flex-wrap: wrap; gap: 0.6rem; font-size: 0.85rem; margin-bottom: 0.25rem; }
+.arc-period { color: var(--muted); font-weight: 600; }
+.arc-org { font-weight: 700; }
+.arc-hats { font-style: italic; font-size: 0.92rem; margin-bottom: 0.3rem; }
+.arc-note { font-size: 0.88rem; color: var(--muted); }
+
+/* ── Stalker facts ────────────────────────────────────── */
+
+.fact-list { display: flex; flex-direction: column; gap: 1.1rem; }
+.fact-card { border-left: 2px solid var(--border); padding-left: 1rem; }
+.fact-label { font-weight: 700; font-size: 0.92rem; margin-bottom: 0.2rem; }
+.fact-text { font-size: 0.92rem; }
+
+/* ── Credentials ──────────────────────────────────────── */
+
+.creds-list {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+
+.view-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.view-footer a { color: var(--fg); }
+
+/* ── Lens selector (recruiter sub-selector) ───────────── */
+
+.lens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lens-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.lens-card:hover {
+  border-color: var(--accent-r);
+  box-shadow: 0 2px 10px rgba(47, 93, 110, 0.15);
+}
+
+.lens-label { font-size: 1.05rem; font-weight: 700; }
+.lens-tagline { font-size: 0.86rem; color: var(--muted); font-style: italic; }
+.lens-cta { margin-top: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--accent-r); }
+
+.view-footer code,
+.selector-footer code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--paper-2);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* ── Lens content: bridge note + skill chips ──────────── */
+
+.bridge-note {
+  margin-top: 1rem;
+  border-left: 3px solid var(--accent-r);
+  background: var(--tint-r);
+  padding: 0.85rem 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.bridge-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--accent-r);
+  margin-bottom: 0.35rem;
+}
+
+.bridge-note p { margin-bottom: 0; font-size: 0.9rem; }
+
+.lens-skills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.skill-chip {
+  font-size: 0.82rem;
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  color: var(--fg);
+}
+
+/* allow the second nav button to sit before the badge */
+.view-nav .back-btn + .back-btn { margin-left: -0.5rem; }
+
+/* ── A/B toggle (ADR-0004 review) ─────────────────────── */
+
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.view-toggle button {
+  background: var(--card-bg);
+  border: none;
+  padding: 0.4rem 0.95rem;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: background 0.12s, color 0.12s;
+}
+
+.view-toggle button + button { border-left: 1px solid var(--border); }
+.view-toggle button.active { background: var(--accent-r); color: #fff; }
+
+/* ── Option A — vertical timeline ─────────────────────── */
+
+.timeline { position: relative; margin-top: 0.5rem; }
+
+/* the trail — a dashed terracotta route the stations sit along (ADR-0011);
+   the dashes slowly flow downward, like a route being traced on a map */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0.9rem;
+  bottom: 0.9rem;
+  width: 2px;
+  background-image: repeating-linear-gradient(to bottom, var(--trail) 0 6px, transparent 6px 12px);
+  background-size: 2px 12px;
+  animation: trail-flow 1.4s linear infinite;
+}
+
+@keyframes trail-flow {
+  to { background-position: 0 12px; }
+}
+
+.tl-node { position: relative; padding-left: 1.75rem; }
+
+.tl-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.6rem 0;
+  font-family: var(--font);
+  color: var(--fg);
+}
+
+.tl-dot {
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--trail);
+  transition: background 0.12s, border-color 0.12s;
+}
+
+/* an opened station reads as the "you are here" pin — dropped with a ripple */
+.tl-node.open .tl-dot {
+  background: var(--trail);
+  border-color: var(--trail);
+  animation: pin-pulse 0.55s ease-out;
+}
+
+@keyframes pin-pulse {
+  from { box-shadow: 0 0 0 0 rgba(180, 83, 44, 0.45); }
+  to   { box-shadow: 0 0 0 11px rgba(180, 83, 44, 0); }
+}
+
+.tl-period { font-weight: 600; font-size: 0.84rem; color: var(--muted); }
+.tl-employer { font-weight: 700; font-size: 0.93rem; }
+.tl-role { font-style: italic; font-size: 0.88rem; color: var(--muted); }
+.tl-toggle { margin-left: auto; font-size: 1.15rem; color: var(--muted); line-height: 1; }
+
+.tl-body { padding: 0 0 0.85rem 0; }
+.tl-summary { font-size: 0.92rem; margin-bottom: 0.5rem; }
+
+.tl-bullets {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* ── Option D — skill tree / character sheet ──────────── */
+
+.skilltree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.st-root {
+  border: 2px solid var(--accent-r);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  background: var(--tint-r);
+}
+
+.st-class { display: block; font-weight: 700; font-size: 1.05rem; color: var(--accent-r); }
+.st-level { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+
+.st-trunk { width: 2px; height: 1.5rem; background: var(--border); }
+
+.st-branches {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 1.1rem 0 0;
+  border-top: 2px solid var(--border);
+  max-width: 100%;
+}
+
+.st-node { display: flex; flex-direction: column; align-items: stretch; }
+
+.st-skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-family: var(--font);
+  background: var(--card-bg);
+  color: var(--fg);
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.st-skill:hover { border-color: var(--accent-r); }
+.st-node.open .st-skill { background: var(--accent-r); color: #fff; border-color: var(--accent-r); }
+
+.st-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--paper-2);
+  border-radius: 999px;
+  padding: 0.05rem 0.4rem;
+}
+
+.st-node.open .st-count { color: var(--accent-r); background: var(--card-bg); }
+
+.st-proof {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  max-width: 16rem;
+  line-height: 1.4;
+}
+
+.st-hint {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Responsive (views) ───────────────────────────────── */
+
+@media (max-width: 520px) {
+  .selector-header h1 { font-size: 1.8rem; }
+  .persona-grid { grid-template-columns: 1fr; }
+  .lens-grid { grid-template-columns: 1fr; }
+  .skill-category { flex-direction: column; gap: 0.2rem; }
+}
+
+/* ── Motion (views) ───────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline::before,
+  .tl-node.open .tl-dot {
+    animation: none;
+  }
+}
