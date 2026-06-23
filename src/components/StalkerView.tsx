@@ -84,8 +84,10 @@ export function StalkerView({ onBack }: Props) {
       <footer className="view-footer">
         <p>
           <a href="https://www.linkedin.com/in/hasrule/" target="_blank" rel="noreferrer">LinkedIn</a>
-          {' · '}
-          hasrule@hotmail.com
+          {' · '}<a href="https://github.com/hasruleng" target="_blank" rel="noreferrer">GitHub</a>
+          {' · '}<a href="https://www.instagram.com/hasrulwho/" target="_blank" rel="noreferrer">Instagram</a>
+          {' · '}<a href="https://github.com/hasruleng/hasrul-buzz" target="_blank" rel="noreferrer">this site's source</a>
+          {' · '}hasrule@hotmail.com
         </p>
       </footer>
     </div>

@@ -87,7 +87,12 @@ export function RecruiterView({ lens, onChangeLens, onBack }: Props) {
       </section>
 
       <footer className="view-footer">
-        <p>hasrule@hotmail.com · +31 616 828 809 · <a href="https://www.linkedin.com/in/hasrule/" target="_blank" rel="noreferrer">linkedin.com/in/hasrule</a></p>
+        <p>
+          hasrule@hotmail.com
+          {' · '}<a href="https://www.linkedin.com/in/hasrule/" target="_blank" rel="noreferrer">LinkedIn</a>
+          {' · '}<a href="https://github.com/hasruleng" target="_blank" rel="noreferrer">GitHub</a>
+          {' · '}<a href="https://github.com/hasruleng/hasrul-buzz" target="_blank" rel="noreferrer">this site's source</a>
+        </p>
       </footer>
     </div>
   );

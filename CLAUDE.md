@@ -86,6 +86,11 @@ Keep the subject line under 72 characters; use the body only when the *why* is n
   goal is to show research, not invention from thin air.
 - Status vocabulary: `Draft` · `Accepted` (date-stamped) · `Superseded`.
 
+## Privacy rules (public repo — treat all site copy as visible to strangers)
+
+- **Never show Hasrul's phone number anywhere on the site.** It is private and must not appear in
+  any component, content file, or generated output — even in footers or contact sections.
+
 ## Honesty rules (inherited from the profile's CLAUDE.md — apply to all site copy)
 
 The site is outward-facing, so the CV-grade rigor applies to every word shown to a visitor:
