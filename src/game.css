@@ -222,6 +222,17 @@
   opacity: 0.8;
 }
 
+/* compass rose pinned to the viewport corner — doesn't scroll with the world (ADR-0011) */
+.game-compass {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  color: var(--muted);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .game-building {
   position: absolute;
   transform: translate(-50%, -50%);

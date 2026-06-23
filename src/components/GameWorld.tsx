@@ -11,6 +11,7 @@ import {
 } from '../game/world';
 import { FIGURES, TONES, HAIRS, buildAvatar } from '../game/avatar';
 import { HasrulAvatar } from './HasrulAvatar';
+import { Compass } from './Compass';
 
 /**
  * The game world — the default landing (ADR-0013). Scenes ①–② (welcome splash,
@@ -183,6 +184,10 @@ export function GameWorld({ onRead }: Props) {
             <span className="game-hint-touch">Tap to </span>
             explore <b>{nearBuilding.lens.label}</b>
           </button>
+        )}
+
+        {phase === 'playing' && (
+          <Compass className="game-compass" size={44} title="North" />
         )}
 
         {phase === 'playing' && !open && (

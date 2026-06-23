@@ -1,4 +1,5 @@
 import { projects } from '../content/projects';
+import { Compass } from './Compass';
 
 type Props = { onBack: () => void };
 
@@ -113,6 +114,7 @@ export function FounderView({ onBack }: Props) {
       </section>
 
       <footer className="view-footer">
+        <Compass className="view-compass" size={32} title="Map of Hasrul's world" />
         <p>
           hasrule@hotmail.com
           {' · '}<a href="https://www.linkedin.com/in/hasrule/" target="_blank" rel="noreferrer">LinkedIn</a>

@@ -3,6 +3,7 @@ import { projects } from '../content/projects';
 import type { LensDef } from '../content/lenses';
 import { Timeline } from './Timeline';
 import { SkillTree } from './SkillTree';
+import { Compass } from './Compass';
 
 type Props = {
   lens: LensDef;
@@ -87,6 +88,7 @@ export function RecruiterView({ lens, onChangeLens, onBack }: Props) {
       </section>
 
       <footer className="view-footer">
+        <Compass className="view-compass" size={32} title="Map of Hasrul's world" />
         <p>
           hasrule@hotmail.com
           {' · '}<a href="https://www.linkedin.com/in/hasrule/" target="_blank" rel="noreferrer">LinkedIn</a>

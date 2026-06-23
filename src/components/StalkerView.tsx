@@ -1,3 +1,5 @@
+import { Compass } from './Compass';
+
 type Props = { onBack: () => void };
 
 const facts = [
@@ -82,6 +84,7 @@ export function StalkerView({ onBack }: Props) {
       </section>
 
       <footer className="view-footer">
+        <Compass className="view-compass" size={32} title="Map of Hasrul's world" />
         <p>
           <a href="https://www.linkedin.com/in/hasrule/" target="_blank" rel="noreferrer">LinkedIn</a>
           {' · '}<a href="https://github.com/hasruleng" target="_blank" rel="noreferrer">GitHub</a>

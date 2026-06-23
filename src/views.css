@@ -157,6 +157,14 @@
 
 .view-footer a { color: var(--fg); }
 
+/* compass flourish — the recurring map mark (ADR-0011) */
+.view-compass {
+  display: block;
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
 /* ── Lens selector (recruiter sub-selector) ───────────── */
 
 .lens-grid {

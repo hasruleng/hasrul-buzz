@@ -11,6 +11,7 @@
   --bg: #f3e7cf;        /* aged-paper base */
   --card-bg: #faf3e2;   /* raised paper (cards) */
   --paper-2: #ece0c4;   /* deeper paper tint (chips, inline code) */
+  --contour: rgba(150, 120, 70, 0.12); /* contour-line ink, well below text */
   --trail: #b4532c;     /* the one route/trail accent */
   --tint-r: #e3edf0;    /* light sea wash */
   --accent-r: #2f5d6e;  /* sea — recruiter */
