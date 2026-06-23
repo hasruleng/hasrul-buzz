@@ -37,7 +37,7 @@ export function FounderView({ onBack }: Props) {
       <header className="view-header">
         <h1>Hasrul Maruf</h1>
         <p className="view-subtitle">
-          The most experienced one-man army on the software job market.
+          One engineer with 13+ years of every hat — before the market needed a name for it.
         </p>
         <p className="view-tagline">
           AI is collapsing the PM + Scrum Master + Analyst + Architect + Developer + QE stack into one role.
