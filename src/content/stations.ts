@@ -28,7 +28,7 @@ export const stations: Station[] = [
       'Individual EngD year-2 design assignment formalised as a contract. Built software quality tooling for Semiconductor TEM systems — one engineer, one tool, one measurable outcome.',
     bullets: [
       'Algorithm Throughput Modeler (ATM) — extracts Activity Diagrams from C# solutions so hardware and domain engineers can understand complex software without reading code',
-      'Performance modelling via OpenTelemetry telemetry → flame graphs, reducing reliance on costly physical TEM performance tests by 80%',
+      'Performance modelling via OpenTelemetry telemetry → flame graphs, reducing reliance on costly physical TEM performance tests by 90%',
       'Stack: Python, C# .NET, AST, PlantUML, Flamegraph, OpenTelemetry · SAFe · Team of 4',
     ],
     tags: ['backend', 'qa', 'product'],

@@ -9,13 +9,11 @@
  */
 
 export const FIGURES = [
-  { id: 'person', emoji: '🧑' },
   { id: 'woman', emoji: '👩' },
   { id: 'man', emoji: '👨' },
 ];
 
 export const TONES = [
-  { id: 'default', mod: '', label: 'Default' },
   { id: 'light', mod: '\u{1F3FB}', label: 'Light' },
   { id: 'medium-light', mod: '\u{1F3FC}', label: 'Medium-light' },
   { id: 'medium', mod: '\u{1F3FD}', label: 'Medium' },
@@ -23,10 +21,12 @@ export const TONES = [
   { id: 'dark', mod: '\u{1F3FF}', label: 'Dark' },
 ];
 
-// Emoji has no "straight" modifier — the figure's default glyph is straight hair.
 export const HAIRS = [
   { id: 'straight', mod: '', label: 'Straight' },
   { id: 'curly', mod: '\u{200D}\u{1F9B1}', label: 'Curly' },
+  { id: 'red', mod: '\u{200D}\u{1F9B0}', label: 'Red' },
+  { id: 'white', mod: '\u{200D}\u{1F9B3}', label: 'White' },
+  { id: 'bald', mod: '\u{200D}\u{1F9B2}', label: 'Bald' },
 ];
 
 export function buildAvatar(figure: string, toneMod: string, hairMod: string): string {

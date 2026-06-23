@@ -8,7 +8,7 @@ export const projects: Project[] = [
     employer: 'Thermo Fisher (Contract)',
     period: 'Jan–Oct 2025',
     oneLiner:
-      'Built software quality tooling solo — Activity Diagram extraction from C# AST + telemetry-driven performance modelling — eliminating 80% of physical TEM test time.',
+      'Built software quality tooling solo — Activity Diagram extraction from C# AST + telemetry-driven performance modelling — eliminating 90% of physical TEM test time.',
     metric: '80% reduction in physical performance verification time',
     tech: ['Python', 'C# .NET', 'AST', 'PlantUML', 'Flamegraph', 'OpenTelemetry'],
     tags: ['qa', 'backend', 'product'],

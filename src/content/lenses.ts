@@ -71,7 +71,7 @@ export const lenses: LensDef[] = [
     headline:
       'Software quality as a discipline — Test Manager roles, 90% pytest coverage, static + dynamic analysis tooling, ISO 25010 training, and an ISTQB roadmap in progress.',
     fitSummary:
-      'Test Manager on the HAS Green Academy cow-welfare detection system: 90% pytest coverage across critical, happy, and boundary paths, with a 20% improvement in detection accuracy. The ATM tool at Thermo Fisher is static + dynamic analysis — C# AST → Activity Diagrams and OpenTelemetry → flame graphs — that cut physical performance verification by 80%. Plus internal-auditor experience for the ISO 9001 Quality Management System.',
+      'Test Manager on the HAS Green Academy cow-welfare detection system: 90% pytest coverage across critical, happy, and boundary paths, with a 20% improvement in detection accuracy. The ATM tool at Thermo Fisher is static + dynamic analysis — C# AST → Activity Diagrams and OpenTelemetry → flame graphs — that can cut physical performance verification by 90%. Plus internal-auditor experience for the ISO 9001 Quality Management System.',
     bridge:
       'ISTQB CTFL and CT-AI are in progress, not yet certified — the honest gap. The bridge: a formal Test Manager role with hard coverage metrics, ISO/IEC 25010 software-product-quality training (TU/e), and requirements & test-plan / test-scenario workshops mentored during the EngD.',
     skills: [
